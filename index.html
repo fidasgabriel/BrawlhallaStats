@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prática</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #a5cbe6;
+      }
+
+      #caixa-cross {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+      }
+
+      .crossover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      #caixa {
+        gap: 3.5rem;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .weapons {
+        font-size: 1.4rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 300;
+      }
+
+      .element {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        justify-content: space-between;
+      }
+
+      .mainInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .gamesInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: space-between;
+      }
+
+      .gamesInfo > span {
+        font-size: 1.2rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 500;
+      }
+
+      .stanceInfo {
+        font-size: 1.2rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 500;
+      }
+
+      .mainInfo > span {
+        font-size: 1.8rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+
+      .title {
+        font-size: 1.8rem;
+        color: #fff6f6;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+
+      .inputBox {
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #brawlhallaLegends {
+        margin-bottom: 2rem;
+        border: #0d0d0d 1px solid;
+        height: 4rem;
+        width: 12rem;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: #f1f1f1;
+        border-radius: 2rem;
+        cursor: pointer;
+      }
+
+      .win {
+        background: rgb(75, 231, 75);
+        height: 100%;
+        transition: 0.3s;
+        border-right: 2px solid #0d0d0d;
+        border-radius: 2rem 0 0 2rem;
+      }
+
+      .lose {
+        background-color: rgb(231, 75, 75);
+        height: 100%;
+        transition: 0.3s;
+        border-radius: 0 2rem 2rem 0;
+      }
+
+      .winrate {
+        height: 1.5rem;
+        display: flex;
+        width: 400px;
+        border: 2px solid #0d0d0d;
+        border-radius: 1.2rem;
+      }
+
+      .stance {
+        border: none;
+        width: 40px;
+      }
+
+      .imgCross {
+        border: 4px solid #0d0d0d;
+        border-radius: 1.2rem;
+        width: 150px;
+      }
+
+      img {
+        border: 4px solid #0d0d0d;
+        border-radius: 1.2rem;
+        width: 275px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputBox">
+      <select
+        id="brawlhallaLegends"
+        name="brawlhalla"
+        onchange="onChangeEvent()"
+      >
+        <option value="" selected>Nenhum</option>
+      </select>
+    </div>
+    <div id="caixa"></div>
+    <div id="caixa-cross">
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
